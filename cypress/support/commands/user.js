@@ -26,6 +26,7 @@ Cypress.Commands.add("createUserApi", (userData, authorization) => {
       },
     })
     .then((res) => {
+      expect(res.status).to.eq(201);
       return res.body;
     });
 });
@@ -40,6 +41,7 @@ Cypress.Commands.add("getUserByIdApi", (userId, authorization) => {
       },
     })
     .then((res) => {
+      expect(res.status).to.eq(200);
       return res.body;
     });
 });
@@ -55,6 +57,7 @@ Cypress.Commands.add("updateUserApi", (userId, userData, authorization) => {
       },
     })
     .then((res) => {
+      expect(res.status).to.eq(200);
       return res.body;
     });
 });
@@ -69,6 +72,7 @@ Cypress.Commands.add("deleteUserApi", (userId, authorization) => {
       },
     })
     .then((res) => {
+      expect(res.status).to.eq(200);
       return res.body;
     });
 });

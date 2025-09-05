@@ -50,22 +50,21 @@ Cypress.Commands.add("getProductByIdApi", (productId, authorization) => {
 });
 
 Cypress.Commands.add("updateProductApi", (productId, productData, authorization) => {
-    return cy
-      .request({
-        method: "PUT",
-        url: `https://serverest.dev/produtos/${productId}`,
-        body: productData,
-        headers: {
-          Authorization: authorization,
-        },
-      })
-      .then((res) => {
-        expect(res.status).to.eq(200);
-        expect(res.body.message).to.eq("Registro alterado com sucesso");
-        return res.body;
-      });
-  }
-);
+  return cy
+    .request({
+      method: "PUT",
+      url: `https://serverest.dev/produtos/${productId}`,
+      body: productData,
+      headers: {
+        Authorization: authorization,
+      },
+    })
+    .then((res) => {
+      expect(res.status).to.eq(200);
+      expect(res.body.message).to.eq("Registro alterado com sucesso");
+      return res.body;
+    });
+});
 
 Cypress.Commands.add("deleteProductApi", (productId, authorization) => {
   return cy

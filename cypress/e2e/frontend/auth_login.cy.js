@@ -2,7 +2,7 @@ describe("Register and Login flow with an admin user", () => {
   let user;
 
   before(() => {
-    const uniqueId = Date.now(); // Gerar um ID aleatório
+    const uniqueId = Date.now();
     user = {
       userName: `Cypress User ${uniqueId}`,
       userEmail: `Cypress_${uniqueId}@Cypress.com`,
@@ -30,7 +30,6 @@ describe("Register and Login flow with an admin user", () => {
 
   it("should not login with invalid credentials", () => {
     cy.visit("/");
-    // utilizando a função uniqueEmail para evitar colisões de emails
     const uniqueEmail = `Cypress ${Date.now()}`;
     cy.get('[data-testid="email"]').type(uniqueEmail + "@cypress.com");
     cy.get('[data-testid="senha"]').type("123456");
