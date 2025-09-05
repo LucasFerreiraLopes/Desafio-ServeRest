@@ -8,7 +8,7 @@
 
 Projeto de testes automatizados com Cypress 15 (JavaScript) para a aplicação [ServeRest](https://serverest.dev). Contém cenários E2E de frontend e testes de API que validam os fluxos principais de autenticação, usuários, produtos e carrinhos.
 
-## 🎯 Funcionalidades Testadas
+## Funcionalidades Testadas
 
 - **Frontend (E2E)**: Registro de usuários, login, cadastro de produtos, listagem
 - **Backend (API)**: CRUD completo de usuários, produtos e carrinhos
@@ -21,13 +21,13 @@ Projeto de testes automatizados com Cypress 15 (JavaScript) para a aplicação [
 - **CI/CD configurado** com GitHub Actions
 - **Arquitetura modular** e manutenível
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 - **Node.js**: Versão 18 ou superior (validado em Node 22)
 - **npm**: Versão 9 ou superior
 - **Cypress**: Versão 15 (instalado automaticamente)
 
-## 📦 Instalação
+## Instalação
 
 ### 1. Clone o repositório
 ```bash
@@ -40,7 +40,7 @@ cd Desafio_Serverest
 npm install
 ```
 
-## ▶️ Executando os Testes
+## Executando os Testes
 
 ### Executar Todos os Testes
 
@@ -71,7 +71,7 @@ npm run cy:frontend
 npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 ```
 
-## 🏗️ Arquitetura e Boas Práticas
+## Arquitetura e Boas Práticas
 
 ### Estrutura Modular
 - **Commands organizados**: Separação por funcionalidade (auth, product, cart, user)
@@ -84,7 +84,7 @@ npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 - **Seletores estáveis**: Uso de `data-testid` em elementos críticos
 - **Dados únicos**: Timestamps para evitar conflitos de dados
 
-## ⚠️ Limitações da Aplicação
+## Limitações da Aplicação
 
 ### Banco de Dados
 - **Limpeza periódica**: A aplicação ServeRest limpa o banco de dados periodicamente
@@ -96,7 +96,7 @@ npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 - **Justificativa**: Contornar limitações de limpeza do banco
 - **Implementação**: Uso de variáveis compartilhadas com validação condicional
 
-## 📊 Cobertura de Testes
+## Cobertura de Testes
 
 ### Frontend (E2E)
 - ✅ Cadastro usuário
@@ -108,7 +108,7 @@ npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 - ✅ CRUD completo de usuários
 - ✅ Operações de carrinho (criar, buscar, finalizar)
 
-## 🚨 Tratamento de Erros
+## Tratamento de Erros
 
 - **Retries automáticos**: Configurado para 2 tentativas em modo CI
 - **Validações robustas**: Status codes, mensagens de erro, estrutura de resposta
@@ -116,7 +116,7 @@ npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 - **Intercepts**: Captura de requisições para validação de APIs
 - **Fallback**: Estratégias para lidar com limitações da aplicação
 
-## 🚀 CI/CD com GitHub Actions (Implementação Adicional)
+## CI/CD com GitHub Actions (Implementação Adicional)
 
 ### Configuração
 - **Trigger**: Push e Pull Requests na branch `main`
@@ -130,7 +130,7 @@ npx cypress run --spec "cypress/e2e/backend/product.cy.js"
 - **Retries**: Configurado para 2 tentativas em modo CI
 - **Logs Detalhados**: Informações completas para debug
 
-## 💡Conceitos Utilizados
+## Conceitos Utilizados
 - [Cypress Hooks](https://www.toolsqa.com/cypress/cypress-hooks)
 - [Arrange/Act/Assert(AAA)](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests)
 - [Background Login](https://docs.cypress.io/api/commands/session)
