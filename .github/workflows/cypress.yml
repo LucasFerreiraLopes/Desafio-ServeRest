@@ -7,7 +7,7 @@ on:
     branches: [ main ]
   # Cron job daily at 03:00
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 12 * * *'
 
 jobs:
   cypress-run:
@@ -38,7 +38,7 @@ jobs:
 
       # Upload screenshots & videos (always, for debugging)
       - name: Upload Cypress screenshots
-        if: always()
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
