@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  },
+  "scripts": {
+    "cy:backend": "cypress run --spec \"cypress/e2e/backend/**/*.cy.js\"",
+    "cy:frontend": "cypress run --spec \"cypress/e2e/frontend/**/*.cy.js\""
+  }
+}

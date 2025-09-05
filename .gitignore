@@ -1,0 +1,15 @@
+# Node deps
+node_modules/
+
+# Cypress artifacts
+cypress/videos/
+cypress/screenshots/
+cypress/.cache/
+
+# Env / secrets
+cypress.env.json
+.env
+
+# Misc
+.DS_Store
+npm-debug.log*
